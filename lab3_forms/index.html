@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Burrito Order Form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main-container">
+        <div id="top">
+            <h1>El Burrito Grande Order Form</h1>
+        </div>
+        <div id="image-sidebar">
+            <img src="images/burrito.jpg" alt="Picture of delicious food" srcset="">
+            <p>An image of the item being ordered!</p>
+        </div>
+        <div id="content-form">
+            <h2>Customize Your Burrito</h2>
+            <h3>Your Burrito's Details</h3>
+            <h4>Included in your $6 burrito</h4>
+            <hr>
+            <form action="https://webhook.site/b04996fa-b8d5-4406-b596-ee254aeedf96" method="post">
+                <fieldset>
+                    <legend>Build Your Burrito</legend>
+                    <!-- Tortilla Selection -->
+                    <fieldset>
+                        <legend>Tortilla Selection</legend>
+                        <input type="radio" name="tortilla" value="White Flour"> White Flour</input><br>
+                        <input type="radio" name="tortilla" value="Wheat Flour"> Wheat Flour</input><br>
+                        <input type="radio" name="tortilla" value="Spinach"> Spinach</input><br>
+                        <input type="radio" name="tortilla" value="Corn"> Corn</input>
+                    </fieldset>
+                    <!-- Rice Selection -->
+                    <fieldset>
+                        <legend>Rice Selection</legend>
+                        <input type="radio" name="rice" value="White Rice"> White Rice</input><br>
+                        <input type="radio" name="rice" value="Brown Rice"> Brown Rice</input>
+                    </fieldset>
+                    <!-- Beans Selection -->
+                    <fieldset>
+                        <legend>Beans Selection</legend>
+                        <input type="radio" name="beans" value="Pinto Beans"> Pinto Beans</input><br>
+                        <input type="radio" name="beans" value="Black Beans"> Black Beans</input>
+                    </fieldset>
+                    <!-- Protien Selection -->
+                    <fieldset>
+                        <legend>Protien Selection</legend>
+                        <input type="radio" name="protien" value="Carnitas"> Carnitas</input><br>
+                        <input type="radio" name="protien" value="Chicken"> Chicken</input><br>
+                        <input type="radio" name="protien" value="Sofritas"> Sofritas</input><br>
+                        <input type="radio" name="protien" value="None"> None</input>
+                    </fieldset>
+                    <!-- Additional Ingredients -->
+                    <fieldset>
+                        <legend>Additional Ingredients</legend>
+                        <input type="checkbox" name="Cheese"> Cheese</input><br>
+                        <input type="checkbox" name="Sour Cream"> Sour Cream</input>
+                    </fieldset>
+                </fieldset>
+                <hr>
+                <fieldset class="info-form">
+                    <legend>Your Information</legend>
+                    <fieldset>
+                        <legend>Login Info</legend>
+                        <label>Username:</label><input type="text" name="username" required><br>
+                        <label>Password:</label><input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain at least one number, one uppercase letter, one lowercase letter, and a minimum of 8 characters long" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Personal Info</legend>
+                        <label>First Name:</label><input type="text" name="first-name" required><br>
+                        <label>Last Name:</label><input type="text" name="last-name" required><br>
+                        <label>E-mail:</label><input type="email" name="email-address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
+                        <label>Phone Number:</label><input type="tel" name="phone-number" pattern="^d{3}-d{3}-d{4}" required><br>
+                        <label>Date of Birth:</label><input type="date" name="date-of-birth" required><br>
+                        <label>Social Security #:</label><input type="number" name="ssn" pattern="^d{3}-d{2}-d{4}$" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Address Information</legend>
+                        <label>Address:</label><input type="text" name="address" required><br>
+                        <label>City:</label><input type="text" name="city" required><br>
+                        <label>State:</label><input type="text" name="state" required><br>
+                        <label>Zip Code:</label><input type="number" name="zip-code" pattern="^d{5}" required>
+                    </fieldset>
+                </fieldset>
+                <hr>
+                <button type="submit">Place Order</button>
+            </form>
+        </div>
+        <div id="order-summary">
+            <h2>Order Total</h2>
+            <ul>
+                <li>Tortilla Selection</li>
+                <li>Rice Selection</li>
+                <li>Protien Selection</li>
+                <li>Additional Ingredients</li>
+            </ul>
+            <hr>
+            <h3>Total: $6.00</h3>
+        </div>
+  
+    </div>
+</body>
+</html>

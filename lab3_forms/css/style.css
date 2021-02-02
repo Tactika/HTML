@@ -1,0 +1,109 @@
+* {
+    font-family: 'Source Serif Pro', serif;
+}
+body {
+    line-height: 1.5em;
+}
+#main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+#main-container div {
+    padding: 10px;  
+}
+#top {
+    background-color: crimson;
+    border-radius: 10px;
+    flex-basis: 100%;
+    box-shadow: 5px 5px 5px grey;
+    min-height: 50px;
+    text-align: center;
+}
+#top h1 {
+    text-shadow: 1px white;
+}
+h1, h2, h3, h4 {
+    font-family:'Oswald', sans-serif;
+    text-align: center;
+}
+#image-sidebar {
+    border: 1px solid darkgrey;
+    border-radius: 10px;
+    flex-basis: 20%;
+    box-shadow: 5px 5px 5px grey;
+    margin: 5px;
+    align-self: flex-start;
+}
+#content-form {
+    border: 1px solid darkgrey;
+    border-radius: 10px;
+    flex-basis: 40%;
+    box-shadow: 5px 5px 5px grey;
+    margin: 5px;
+    flex-grow: 1;
+}
+#content-form fieldset {
+    border: none;
+}
+label {
+    width: 125px;
+    display: inline-block;
+}
+.info-form input {
+    display: inline-block;
+    width: 250px;
+}
+button {
+    width: 10em;
+    height: 3em;
+    font-weight: bold;
+    color: darkorange;
+    margin-top: 10px;
+}
+#order-summary {
+    border: 1px solid darkgrey;
+    border-radius: 10px;
+    flex-basis: 20%;
+    box-shadow: 5px 5px 5px grey;
+    margin: 5px;
+    align-self: flex-start;
+}
+#image-sidebar img {
+    max-width: 100%;
+}
+@media screen and (max-width: 850px) {
+    #image-sidebar {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    #image-sidebar img {
+        max-height: 200px;
+        align-self: center;
+    }
+    #content-form {
+        flex-basis: 100%;
+        margin: 0 auto;
+    }
+    #order-summary {
+        flex-basis: 100%;
+    }
+}
+@media screen and (max-width: 375px) {
+    #top h1 {
+        font-size: 22px;
+    }
+    #image-sidebar {
+        flex-basis: 100%;
+    }
+    #content-form {
+        flex-basis: 100%;
+        flex-grow: 0;
+        margin: 0 auto;
+    }
+    #order-summary {
+        flex-basis: 100%;
+    }
+}
